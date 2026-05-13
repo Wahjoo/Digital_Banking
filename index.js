@@ -19,7 +19,12 @@ app.use('/api/banking', bankingRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
-  res.send('NibssByPhoenix Digital Banking System API is running...');
+  res.json({
+    status: 'success',
+    message: 'Digital Banking System API is running...',
+    version: '1.0.0',
+    documentation: 'https://github.com/Wahjoo/Digital_Banking#readme'
+  });
 });
 
 // Database Connection
